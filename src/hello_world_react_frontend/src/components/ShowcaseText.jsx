@@ -19,9 +19,9 @@ const ShowcaseText = () => {
                         <h3 className="text-xl font-semibold">Key Features:</h3>
                         <ul className="space-y-3">
                             {[
-                                "A React frontend and Motoko-based backend",
+                                "A React frontend and Motoko-based backend fully deployed on ICP",
                                 "A query function that accepts a name",
-                                "Fully deployed app on ICP",
+                                "A frontend that displays the query function return",
                             ].map((feature, index) => (
                                 <motion.li
                                     key={index}

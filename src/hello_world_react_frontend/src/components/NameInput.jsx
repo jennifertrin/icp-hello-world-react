@@ -4,8 +4,8 @@ import ShowcaseText from "./ShowcaseText";
 import { hello_world_react_backend } from 'declarations/hello_world_react_backend';
 
 const NameInput = () => {
-    const [greeting, setGreeting] = useState();
-    const [name, setName] = useState();
+    const [greeting, setGreeting] = useState(null);
+    const [name, setName] = useState(null);
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -13,6 +13,11 @@ const NameInput = () => {
             setGreeting(newGreeting);
         });
         return false;
+    }
+
+    function handleGoBack() {
+        setName('');
+        setGreeting(null);
     }
 
     return (
@@ -24,7 +29,7 @@ const NameInput = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, ease: "easeOut" }}
             >
-                {!greeting || !name ?
+                {!greeting ?
                     <Card className="w-full h-full relative shadow-2xl shadow-blue-500/20 duration-500 transform">
                         <form onSubmit={handleSubmit} className="rounded-[20px] p-6 bg-infinite">
                             <div className="bg-meteorite shadow-xl mb-4 p-4 flex items-center">
@@ -48,7 +53,7 @@ const NameInput = () => {
                         <div className="rounded-[20px] py-12 bg-infinite px-4 h-full w-full flex flex-col justify-center items-center">
                             <h2 className="text-3xl font-bold text-white mb-4">{greeting}</h2>
                             <p className="mb-6 text-gray-300">Thank you for submitting your name.</p>
-                            <button onClick={() => setName(null)} className="px-4 py-2 bg-picton-blue rounded-md focus:outline-none focus:ring-2 focus:ring-picton-blue focus:ring-opacity-50 hover:bg-picton-blue transition duration-300 ease-in-out font-semibold shadow-lg hover:shadow-xl hover:shadow-picton-blue/30">
+                            <button onClick={handleGoBack} className="px-4 py-2 bg-picton-blue rounded-md focus:outline-none focus:ring-2 focus:ring-picton-blue focus:ring-opacity-50 hover:bg-picton-blue transition duration-300 ease-in-out font-semibold shadow-lg hover:shadow-xl hover:shadow-picton-blue/30">
                                 Go Back
                             </button>
                         </div>
@@ -68,7 +73,7 @@ const Card = ({ greeting, className, children }) => (
 const ExampleForm = () => {
     return (
         <div className="max-w-4xl mx-auto my-12">
-            <h1 className="text-3xl font-bold mb-6">Hello, world!</h1>
+            <h1 className="text-3xl font-bold mb-6">Hello, world! Example</h1>
             <div className="grid md:grid-cols-2 gap-8 h-[500px]">
                 <div className="p-4 flex flex-col overflow-hidden border border-gray-200">
                     <div className="flex-grow overflow-auto ">
