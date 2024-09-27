@@ -33,7 +33,7 @@ const NameInput = () => {
                             <p className="mb-4 text-gray-300">Please enter your name below and click submit.</p>
                             <input
                                 type="text"
-                                value={greeting}
+                                value={name}
                                 onChange={(e) => setName(e?.target?.value)}
                                 placeholder="Enter your name"
                                 className="w-full px-3 py-2 mb-4 placeholder-gray-400 rounded-md text-gray-700 bg-gray-100 focus:outline-none focus:ring-2 focus:ring-indigo-300 focus:border-transparent"
