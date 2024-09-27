@@ -6,7 +6,7 @@ const ShowcaseText = () => {
     return (
         <div>
             <motion.div
-                className="bg-white text-black shadow-mg overflow-hidden border border-gray-200"
+                className="bg-white text-black shadow-mg overflow-hidden"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
