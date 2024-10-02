@@ -14,7 +14,7 @@ const ShowcaseText = () => {
                 <div>
                     <div className="p-8 space-y-6">
                         <p className="text-gray-600 leading-relaxed">
-                            This guide shows how to get started developing on ICP quickly by deploying your first 'Hello, world!' smart contract.
+                            This project shows how to get started developing on ICP quickly by deploying your first 'Hello, world!' smart contract.
                         </p>
                         <h3 className="text-xl font-semibold">Key Features:</h3>
                         <ul className="space-y-3">
