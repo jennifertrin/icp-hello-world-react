@@ -81,7 +81,6 @@ const ExampleForm = () => {
                     </div>
                 </div>
                 <div className="bg-gray-200 rounded-lg p-8 flex flex-col overflow-hidden">
-                    <h2 className="text-2xl font-semibold mb-6">Live Demo</h2>
                     <div className="flex-grow overflow-auto">
                         <NameInput />
                     </div>
